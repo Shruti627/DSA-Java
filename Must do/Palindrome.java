@@ -1,12 +1,19 @@
 import java.util.Scanner;
 
-public class ReverseNumber {
+public class Palindrome {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number : ");
         int n = sc.nextInt();
 
-        int num = Math.abs(n);
+        int temp = n;
+
+        if (n < 0) {
+            System.out.println("Negative numbers cannot be palindrome!");
+            return;
+        }
+
+        int num = n;
         int rev = 0;
 
         while (num > 0) {
@@ -15,11 +22,12 @@ public class ReverseNumber {
             num = num / 10;
         }
 
-        if (n < 0) {
-            rev = -rev; 
+        if (rev == temp) {
+            System.out.println("Palindrome!");
+        } else {
+            System.out.println("Not a palindrome!");
         }
 
-        System.out.println("Reversed num : " + rev);
-        
+        sc.close();
     }
 }
