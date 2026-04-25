@@ -23,6 +23,7 @@ public class LCM {
         int num2 = sc.nextInt();
 
         int lcm = findLCM(num1, num2);
+        //12
 
         System.out.println("LCM = " + lcm);
     }
